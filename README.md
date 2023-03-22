@@ -1,2 +1,2 @@
 # ds_portfolio
-Portfolio of data science projects.
+Portfolio of Harrison Henningsen's data science projects.
