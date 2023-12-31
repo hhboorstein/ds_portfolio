@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import zipfile
 import os, shutil
 import requests
@@ -22,9 +24,11 @@ class FakeDogDataset(Dataset):
             else:
                 print('failure')
 
+        # unzip
         with zipfile.ZipFile('/content/low-resolution.zip','r') as zip_ref:
             zip_ref.extractall('/content/')
 
+        # move all images to the same directory
         os.mkdir('/content/Dogs')
         for root,_,filenames in os.walk('/content/low-resolution'):
             for filename in filenames:
